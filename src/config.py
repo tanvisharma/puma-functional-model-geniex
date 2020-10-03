@@ -55,6 +55,8 @@ cols = 1 # num of crossbars in col dimension
 Gon = 1/100
 Goff = 1/600
 Vmax =0.25
+inmax_test = 1.2905
+inmin_test = 0.8
 
 # creating directory for dataset collection
 if dataset:

@@ -86,7 +86,7 @@ def bit_slicing(weight, frac_bit, bit_slice, weight_bits):  # version 2
 def float_to_16bits_tensor_fast(input, frac_bits, bit_slice, bit_slice_num, input_bits): # input is batch x n tensor / output is n x 16 tensor..
 
     if(input_bits==1): # (NOTE) assuming inputs are binary
-       return input.unsqueeze(-1)
+        return input.unsqueeze(-1)
     else:
 
         int_bit = input_bits - frac_bits -1 # extra -1 for sign bit
@@ -182,8 +182,8 @@ def mvm_tensor_nonid(zeros, shift_add_bit_stream, shift_add_bit_slice, output_re
 #    inmin_test =    0.85
 
     #100k, 128x128
-    inmax_test =    1.2905
-    inmin_test =    0.8
+    inmax_test =    cfg.inmax_test
+    inmin_test =    cfg.inmin_test
         #64x64
 #    inmax_test = 1.0959
 #    inmin_test = 0.8
